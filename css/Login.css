@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #007a1600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+body{
+    background-image: url('login background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.login-container {
+    background: #004d1175;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow:5px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 200%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h2 {
+    color: #dfdfdf;
+    margin-bottom: 30px;
+    font-style: bold;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #9e9e9e;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #1f8239a9;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding doesn't increase total width */
+}
+
+.input-group input:focus {
+    border-color: #1f97359a;
+    outline: none;
+}
+
+button {
+    background-color: #009f15b4;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #026707;
+}
+
+.error-message {
+    color: #b72c3a;
+    margin-top: 15px;
+    height: 18px; /* Reserve space to prevent layout shift */
+    visibility: hidden;
+    font-size: 14px;
+}
+
+.footer-links {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: #25b208;
+    text-decoration: none;
+    margin: 0 10px;
+    font-style: bold;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    font-size: 16px;
+}

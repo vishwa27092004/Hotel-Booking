@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #00674f;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  background-color: #0a3c30;
+  padding: 15px;
+  position: relative;
+}
+
+.navbar h2 {
+  color: rgba(214, 214, 214, 0.717);
+  margin: 0;
+  font-size: 3rem;
+  text-align: center;
+}
+
+#current-time {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  color: rgba(214, 214, 214, 0.717);
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #3ebb9e;
+}
+
+/* Center the entire content area */
+.content {
+  text-align: center;
+  margin-top: 100px;
+  color: #2f3640;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Center the div buttons horizontally and vertically */
+.content ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px;
+}
+
+/* Style for each option box */
+.content div {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px 40px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 3px 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.content div:hover {
+  background-color: #00261d;
+  transform: scale(1.05);
+  color: white;
+}
+
+.content a {
+  color: #2f3640;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+}

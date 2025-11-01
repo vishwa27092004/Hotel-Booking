@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Booking Portal</title>
+  <link rel="stylesheet" href="home.css">
+  <script defer src="home.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="navbar">
+  <h2>WELCOME</h2>
+  <time id="current-time"></time>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const timeElement = document.getElementById('current-time');
+            const option2 = { weekday: 'long' };
+            const option1 = { day: 'numeric' , month: 'numeric' , year: 'numeric' };
+            timeElement.dateTime = now.toISOString();
+            timeElement.innerHTML = `${now.toLocaleDateString(undefined,option2)}<br>${now.toLocaleDateString(undefined, option1)}<br>${now.toLocaleTimeString()}`;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+    </nav>
+  </header>
+    <h3 style="padding: 20px; text-align: center;">Select an option to continue.</h3>
+  <main class="content">
+    <ul style="align-items: center;">
+        <div><a href="search room.html"><i class="fa-solid fa-magnifying-glass"></i> Search Room</a></div>
+        <div><a href="history.html"><i class="fa-solid fa-clock-rotate-left"></i> History</a></div>
+        <div><a href="payment.html"><i class="fa-solid fa-credit-card"></i> Payment</a></div>
+        <div><a href="login.html" id="logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></div>
+    </ul>
+  </main>
+</body>
+</html>

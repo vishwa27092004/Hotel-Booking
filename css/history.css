@@ -1,0 +1,150 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #00674f;
+    margin: 0;
+    color: #fff;
+}
+
+.history-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.history-header h1 {
+    color: #fff;
+    margin: 0;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn {
+    background-color: #00a859;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.nav-btn1 {
+    background-color: #9e000083;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.nav-btn1:hover {
+    background-color: #660202;
+}
+
+.nav-btn:hover {
+    background-color: #006132;
+}
+
+.book-btn {
+    background-color: #00a859;
+}
+
+.book-btn:hover {
+    background-color: #005b2f;
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.placeholder-text {
+    text-align: center;
+    color: #ddd;
+    font-style: italic;
+}
+
+.booking-card {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.booking-card:hover {
+    transform: translateY(-3px);
+}
+
+.booking-details h3 {
+    margin: 0 0 8px 0;
+    color: #00674f;
+}
+
+.booking-summary {
+    text-align: right;
+}
+
+.date {
+    display: block;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.price {
+    font-weight: bold;
+    color: #e91e63;
+}
+
+/* --- Action Buttons --- */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+    justify-content: flex-end;
+}
+
+.action-buttons button {
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 0.9em;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.edit-btn {
+    background-color: #028200;
+}
+
+.edit-btn:hover {
+    background-color: #004e11ca;
+}
+
+.delete-btn {
+    background-color: #a500009d;
+}
+
+.delete-btn:hover {
+    background-color: #6300009c;
+}

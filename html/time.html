@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Date and time</title>
+    <style>
+        h1 {
+            color: green;
+        }
+
+        time {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <time id="current-time"></time>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const timeElement = document.getElementById('current-time');
+            const option2 = { weekday: 'long' };
+            const option1 = { day: 'numeric' , month: 'numeric' , year: 'numeric' };
+            timeElement.dateTime = now.toISOString();
+            timeElement.innerHTML = `${now.toLocaleDateString(undefined,option2)}<br>${now.toLocaleDateString(undefined, option1)}<br>${now.toLocaleTimeString()}`;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+
+</html>

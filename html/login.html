@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+
+    <style>
+        /* Time and date display styling */
+        .time-container {
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+            width: 450px;
+        }
+
+        #current-time {
+            font-size: 48px;
+            font-weight: bold;
+            line-height: 1.4;
+        }
+
+        #current-time small {
+            font-size: 18px;
+            display: block;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- Time display section -->
+        <div class="time-container">
+            <div id="current-time"></div>
+        </div>
+
+        <!-- Login container -->
+        <div class="login-container">
+            <h2>Login or SignUp</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email">Enter Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" id="loginButton">Log In</button>
+                <p class="error-message" id="errorMessage"></p>
+            </form>
+            <div class="footer-links">
+                <a href="#">Forgot Password?</a>
+                <a href="#">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const timeElement = document.getElementById('current-time');
+            const option2 = { weekday: 'long' };
+            const option1 = { day: 'numeric', month: 'long', year: 'numeric' };
+
+            const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            const dayStr = now.toLocaleDateString(undefined, option2);
+            const dateStr = now.toLocaleDateString(undefined, option1);
+
+            timeElement.innerHTML = `
+                ${timeStr}<br>
+                <small>${dayStr}, ${dateStr}</small>
+            `;
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+
+    <script src="Login.js"></script>
+</body>
+</html>

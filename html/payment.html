@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Payment - UPI</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <div class="payment-container">
+        <h2>Complete Your Booking</h2>
+
+        <div class="summary-box">
+            <h3>Order Summary</h3>
+            <p>Room: <span id="roomNameDisplay">Loading...</span></p>
+            <p>Nights: <span id="nightsDisplay">...</span> | Rate: <span id="rateDisplay">...</span></p>
+            <div class="total-amount">
+                <span>Total Amount Due:</span>
+                <strong id="totalAmountDisplay">₹ 0.00</strong> 
+            </div>
+        </div>
+
+        <form id="upiPaymentForm" class="payment-form">
+            <h3>Pay via UPI</h3>
+            
+            <div class="input-group">
+                <label for="upiVpa">Enter UPI ID (VPA)</label>
+                <input type="text" id="upiVpa" name="upiVpa" placeholder="e.g., success@upi" required style="background-color: #00674f;">
+            </div>
+
+            <p class="instruction">
+                After clicking 'Pay Now', check your UPI app (like GPay, PhonePe, or Paytm) to approve the payment request.
+            </p>
+            
+            <div class="input-group pin-group">
+                <label for="upiPin">Enter UPI PIN (Use 1234)</label>
+                <input type="password" id="upiPin" name="upiPin" maxlength="4" required style="background-color: #00674f;">
+            </div>
+            
+            <button type="submit" id="payButton">Pay Now</button>
+
+            <p class="error-message" id="errorMessage"></p>
+        </form>
+    </div>
+
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <div class="modal-header">
+                <h3>Booking Confirmed!</h3>
+                <p>Thank you for choosing us. Your payment has been processed successfully.</p>
+            </div>
+            <div class="modal-body">
+                <h4>Your Reservation Details:</h4>
+                <div class="detail-row">
+                    <span>Room Type:</span> <strong id="modalRoomName"></strong>
+                </div>
+                <div class="detail-row">
+                    <span>Nights Booked:</span> <strong id="modalNights"></strong>
+                </div>
+                <div class="detail-row">
+                    <span>Total Paid:</span> <strong id="modalTotalPaid" class="total-paid"></strong> 
+                </div>
+                <div class="detail-row">
+                    <span>Confirmation ID:</span> <strong id="modalConfId"></strong>
+                </div>
+            </div>
+            <button class="modal-button" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+    <script src="payment.js"></script>
+</body>
+</html>
